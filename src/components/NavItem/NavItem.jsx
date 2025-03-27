@@ -1,9 +1,14 @@
 import { NavLink } from "react-router-dom"
-import styles from "./navigation.module.css";
+import styles from "../Navigation/navigation.module.css";
 
-const NavItem = ({name}) => {
+const NavItem = ({name, path, updateFunction}) => {
+
+    const handleClick = (event = false) => {
+        updateFunction(event);
+    }
+
     return (
-        <NavLink className={({isActive}) => isActive ? styles.active : ""} to={name.toLowerCase() === "home" ? "/" : name.toLowerCase()}>{name}</NavLink>
+        <NavLink onClick={() => updateFunction()} className={({isActive}) => isActive ? styles.active : ""} to={path.toLowerCase() === "home" ? "/" : path.toLowerCase()}>{name}</NavLink>
     )
 }
 

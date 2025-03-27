@@ -1,0 +1,32 @@
+.menu {
+    display: flex;
+    position: relative;
+}
+
+.subMenu {
+    position: absolute;
+    top: calc(125%);
+    left: 0%;
+    background-color: whitesmoke;
+    display: flex;
+}
+
+a,
+a:active,
+a:visited,
+.link {
+    cursor: pointer;
+    text-decoration: none;
+    color: red;
+    background-color: antiquewhite;
+    padding: 16px;
+    margin: 16px;
+}
+
+a.active,
+a:hover,
+.link:hover,
+.link.active {
+    color: blue;
+    background-color: beige;
+}
